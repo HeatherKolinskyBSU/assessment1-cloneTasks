@@ -10,6 +10,19 @@ body {
     text-align: center;
 }
 
+/* Default image size for the page's logo */
+#img {
+    width:80px; 
+    height:80px;
+}
+
+/* Changes the size of the page's logo ONLY IF the viewport is >1024px */
+@media (min-width: 1024px) {
+    #logo {
+    width:200px; height:200px;
+    }
+}
+
 /* Styles the top navigation bar */
 .topnav {
     overflow: hidden;
