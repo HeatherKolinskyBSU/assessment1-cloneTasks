@@ -11,21 +11,22 @@ body {
 }
 
 /* Default image size for the page's logo */
-#logo {
+.logo {
     width:80px; 
     height:80px;
 }
 
 /* Changes the size of the page's logo ONLY IF the viewport is >1024px */
 @media (min-width: 1024px) {
-    #logo {
+    .logo {
     width:200px; height:200px;
     }
 }
 
-#album {
+/* Default image size for featured album covers */
+.album {
     width: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
 
 /* Navigation bar (parent) */
@@ -51,8 +52,30 @@ body {
     color: black;
 }
 
+/* .title needs a different text size on desktop so it has its own style and media query */
+/* I would just use .header but that would affect everything that uses .header on desktop viewport */
+.title {
+    overflow: hidden;
+    justify-content: center;
+    display: flex;
+    text-align: center;
+    font-size: 20px;
+    background-color: white;
+}
+
+@media (min-width: 1024px) {
+    .title {
+        overflow: hidden;
+        justify-content: center;
+        display: flex;
+        text-align: center;
+        font-size: 40px;
+        background-color: white;
+    }
+}
+
 /* Any large text (i.e. titles and headings */
-.bigText {
+.heading {
     overflow: hidden;
     justify-content: center;
     display: flex;
@@ -70,6 +93,31 @@ body {
     text-decoration: none;
     background-color: white;
     padding: 5px;
+}
+
+/* Same situation as .title */
+/* There's probably a better way of implementing this but it's fine for now */
+.firstParagraph {
+    text-align: left;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    background-color: white;
+    padding: 5px;
+}
+
+@media (min-width: 1024px) {
+    .firstParagraph {
+        text-align: left;
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        text-decoration: none;
+        background-color: white;
+        padding: 5px;
+        font-size: 30px;
+    }
 }
 
 /* Page footer */
