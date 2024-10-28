@@ -19,14 +19,9 @@ body {
 /* Changes the size of the page's logo ONLY IF the viewport is >1024px */
 @media (min-width: 1024px) {
     .logo {
-    width:200px; height:200px;
+    width:200px; 
+    height:200px;
     }
-}
-
-/* Default image size for featured album covers */
-.album {
-    width: 100%;
-    object-fit: cover;
 }
 
 /* Navigation bar (parent) */
@@ -119,6 +114,23 @@ body {
         background-color: white;
         padding: 5px;
         font-size: 30px;
+    }
+}
+
+/* Default image size for the author's profile picture */
+.authorImage {
+    text-align: center;
+    border-radius: 50%;
+    width:80px; 
+    height:80px;
+}
+
+/* Changes the size of the author's profile picture ONLY IF the viewport is >1024px */
+@media (min-width: 1024px) {
+    .authorImage {
+        border-radius: 50%;
+        width:200px; 
+        height:200px;
     }
 }
 
