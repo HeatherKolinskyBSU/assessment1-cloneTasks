@@ -52,6 +52,7 @@ body {
     color: black;
 }
 
+/* styling for the main title */
 /* .title needs a different text size on desktop so it has its own style and media query */
 /* I would just use .header but that would affect everything that uses .header on desktop viewport */
 .title {
@@ -95,6 +96,7 @@ body {
     padding: 5px;
 }
 
+/* styling for the first paragraph */
 /* Same situation as .title */
 /* There's probably a better way of implementing this but it's fine for now */
 .firstParagraph {
