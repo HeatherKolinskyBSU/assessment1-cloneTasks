@@ -11,7 +11,7 @@ body {
 }
 
 /* Default image size for the page's logo */
-#img {
+#logo {
     width:80px; 
     height:80px;
 }
@@ -21,6 +21,11 @@ body {
     #logo {
     width:200px; height:200px;
     }
+}
+
+#album {
+    width: 100%;
+    object-fit:cover;
 }
 
 /* Navigation bar (parent) */
@@ -46,12 +51,11 @@ body {
     color: black;
 }
 
-/* Page title */
+/* Any large text (i.e. titles and headings */
 .bigText {
     overflow: hidden;
     justify-content: center;
     display: flex;
-    position: top;
     text-align: center;
     font-size: 20px;
     background-color: white;
