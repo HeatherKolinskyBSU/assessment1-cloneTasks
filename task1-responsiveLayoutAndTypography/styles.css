@@ -117,6 +117,22 @@ body {
     }
 }
 
+/* Default image size for the featured album covers */
+.album {
+    width:80px; 
+    height:80px;
+}
+
+/* Container for the various album covers featured */
+.albumContainer {
+    text-align: center;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    padding: 5px;
+}
+
 /* Default image size for the author's profile picture */
 .author {
     text-align: center;
@@ -128,7 +144,7 @@ body {
 
 /* Changes the size of the author's profile picture ONLY IF the viewport is >1024px */
 @media (min-width: 1024px) {
-    .authorImage {
+    .author {
         border-radius: 50%;
         width:200px; 
         height:200px;
