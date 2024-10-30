@@ -9,6 +9,15 @@
     <link rel="stylesheet" href="styles.css"> <!-- Links the CSS stylesheet to HTML -->
     <meta charset = "utf-8">
     <meta name = "viewport" content = "width=device-width, initial-scale=1">
+
+    <!-- Links to the two required fonts for this website -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Protest+Guerrilla&display=swap" rel="stylesheet">
+    <!-- Second font link starts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Protest+Guerrilla&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -96,27 +105,31 @@
            Interdum ullamcorper fringilla himenaeos mollis; in arcu pharetra massa. Nunc mauris taciti montes sapien molestie orci ac quis.</p>
     </div>
 
+    <!-- Stores the album cover images -->
     <div class = "albumContainer">
-        <img id="album" scr="assets/all-encores.jpg" alt="All-Encores album cover">
-
-        <img id="album" scr="assets/articulation.jpg" alt="Articulation album cover">
-
-        <img id="album" scr="assets/blurred.jpg" alt="Blurred album cover">
-
-        <img id="album" scr="assets/euology-for-evolution" alt="Euology for Evolution album cover">
+        <img id="album" src="assets/all-encores.jpg" alt="All-Encores album cover">
+        <img id="album" src="assets/articulation.jpg" alt="Articulation album cover">
+        <img id="album" src="assets/blurred.jpg" alt="Blurred album cover">
+        <img id="album" src="assets/eulogy-for-evolution.jpg" alt="Euology for Evolution album cover">
+        <img id="album" src="assets/the-cell.jpg" alt="The Cell album cover">
+        <img id="album" src="assets/encores-2.jpg" alt="Encores 2 album cover">
     </div>
 
-    <img id="author" src="assets/profile_picture.jpg" alt="Author's Profile Picture">
-
-    <div class = "heading">
-        <h1>The Author</h1>
+    <div class="authorContainer">
+        <!-- In order to display this correctly on desktop, the heading and text are in the same div tag under another larger div tag -->
+        <!-- This lets us make a table with 2 rows in the left column and 1 row in the right-->
+        <div class="authorFormatting">
+            <div class = "heading">
+                <h1>The Author</h1>
+            </div>
+            <div class = "smallTextContent">
+                <p>Sapien leo scelerisque per convallis torquent nunc. Lobortis eleifend a nam sit turpis nostra. 
+                   Tempus suspendisse libero curae faucibus lobortis litora bibendum praesent! Eget quam magna, diam commodo interdum sapien magnis.</p>
+            </div>
+        </div>
+        <!-- img is down here so it displays in the right-hand column -->
+        <img id="author" src="assets/profile_picture.jpg" alt="Author's Profile Picture">
     </div>
-
-    <div class = "smallTextContent">
-        <p>Sapien leo scelerisque per convallis torquent nunc. Lobortis eleifend a nam sit turpis nostra. 
-           Tempus suspendisse libero curae faucibus lobortis litora bibendum praesent! Eget quam magna, diam commodo interdum sapien magnis.</p>
-    </div>
-
     <div class = "footer">
         <p>Copyright © Erased Disks Ltd.</p>
     </div>

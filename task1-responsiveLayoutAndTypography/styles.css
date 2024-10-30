@@ -11,14 +11,14 @@ body {
 }
 
 /* Default image size for the page's logo */
-.logo {
+#logo {
     width:80px; 
     height:80px;
 }
 
 /* Changes the size of the page's logo ONLY IF the viewport is >1024px */
 @media (min-width: 1024px) {
-    .logo {
+    #logo {
     width:200px; 
     height:200px;
     }
@@ -39,6 +39,10 @@ body {
     padding: 30px;
     flex-grow: 1;
     text-decoration: none;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Darkens a specific .topnav cell when the user hovers over it */
@@ -57,16 +61,15 @@ body {
     text-align: center;
     font-size: 20px;
     background-color: white;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
+/* Enlarges the main title on desktop (>1024px) */
 @media (min-width: 1024px) {
     .title {
-        overflow: hidden;
-        justify-content: center;
-        display: flex;
-        text-align: center;
         font-size: 40px;
-        background-color: white;
     }
 }
 
@@ -78,6 +81,9 @@ body {
     text-align: center;
     font-size: 20px;
     background-color: white;
+    font-family: "Protest Guerrilla", sans-serif;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Main page text content */
@@ -89,6 +95,10 @@ body {
     text-decoration: none;
     background-color: white;
     padding: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* styling for the first paragraph */
@@ -102,25 +112,23 @@ body {
     text-decoration: none;
     background-color: white;
     padding: 5px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
+/* Enlarges the first paragraph on desktop (>1024px) */
 @media (min-width: 1024px) {
     .firstParagraph {
-        text-align: left;
-        flex-grow: 1;
-        display: flex;
-        flex-direction: column;
-        text-decoration: none;
-        background-color: white;
-        padding: 5px;
         font-size: 30px;
     }
 }
 
 /* Default image size for the featured album covers */
-.album {
-    width:80px; 
-    height:80px;
+#album {
+    width: 100%;
+    object-fit: contain;
 }
 
 /* Container for the various album covers featured */
@@ -128,27 +136,59 @@ body {
     text-align: center;
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     background-color: white;
-    padding: 5px;
 }
 
+/* Shrinks the album cover size on desktop so they fit into a grid */
+@media (min-width: 1024px) {
+    #album {
+        width:49%;
+    }
+}
+
+/* NOTE: Desktop is meant to have 5 album covers in a weird configuration */
+/* however we were given 6 images so a 2x3 grid made more sense to implement */
+
 /* Default image size for the author's profile picture */
-.author {
+#author {
     text-align: center;
     max-width: 100%;
     border-radius: 50%;
     width:80px; 
     height:80px;
+    object-fit: contain;
 }
 
 /* Changes the size of the author's profile picture ONLY IF the viewport is >1024px */
 @media (min-width: 1024px) {
-    .author {
-        border-radius: 50%;
+    #author {
         width:200px; 
         height:200px;
     }
+}
+
+/* Container for storing elements relating to the Author's paragraph at the bottom of the page */
+.authorContainer {
+    padding: 10px;
+    text-align: right;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+/* Formats .authorContainer on desktop */
+.authorFormatting{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: white;
+    width: 50%;
 }
 
 /* Page footer */
