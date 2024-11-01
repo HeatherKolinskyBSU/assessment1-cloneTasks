@@ -26,15 +26,15 @@ body {
 
 /* Default image size for the page's logo */
 #logo {
-    width:80px; 
-    height:80px;
+    width: 80px;
+    height: 80px;
 }
 
 /* Changes the size of the page's logo ONLY IF the viewport is >1024px */
 @media (min-width: 1024px) {
     #logo {
-    width:200px; 
-    height:200px;
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -84,6 +84,7 @@ body {
 @media (min-width: 1024px) {
     .title {
         font-size: 40px;
+        padding: 50px;
     }
 }
 
@@ -98,14 +99,19 @@ body {
     font-family: "Protest Guerrilla", sans-serif;
     font-weight: 400;
     font-style: normal;
+    width: 100%;
+}
+
+/* Thing for making desktop columns with */
+.mainContentColumns {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    background-color: white;
 }
 
 /* Main page text content */
 .smallTextContent {
-    text-align: left;
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
     text-decoration: none;
     background-color: white;
     padding: 20px;
@@ -115,6 +121,13 @@ body {
     font-style: normal;
 }
 
+/* Turns the text content into 3 columns on desktop (>1024px) specifically */
+@media (min-width: 1024px) {
+    .smallTextContent {
+        width: 28%;
+    }
+}
+
 /* styling for the first paragraph */
 /* Same situation as .title */
 /* There's probably a better way of implementing this but it's fine for now */
@@ -122,7 +135,6 @@ body {
     text-align: left;
     flex-grow: 1;
     display: flex;
-    flex-direction: column;
     text-decoration: none;
     background-color: white;
     padding: 5px;
@@ -159,28 +171,25 @@ body {
 /* Shrinks the album cover size on desktop so they fit into a grid */
 @media (min-width: 1024px) {
     #album {
-        width:49%;
+        width: 50%;
     }
 }
-
-/* NOTE: Desktop is meant to have 5 album covers in a weird configuration */
-/* however we were given 6 images so a 2x3 grid made more sense to implement */
 
 /* Default image size for the author's profile picture */
 #author {
     text-align: center;
     max-width: 100%;
     border-radius: 50%;
-    width:80px; 
-    height:80px;
+    width: 80px;
+    height: 80px;
     object-fit: contain;
 }
 
 /* Changes the size of the author's profile picture ONLY IF the viewport is >1024px */
 @media (min-width: 1024px) {
     #author {
-        width:200px; 
-        height:200px;
+        width: 200px;
+        height: 200px;
     }
 }
 
@@ -197,13 +206,25 @@ body {
 }
 
 /* Formats .authorContainer on desktop */
-.authorFormatting{
+.authorFormatting {
     display: flex;
     justify-content: center;
     flex-direction: column;
     flex-wrap: wrap;
     background-color: white;
     width: 50%;
+}
+
+/* Using *another* custom format so it doesn't try and re-arrange itself on >1024px viewports */
+.authorParagraph {
+    text-decoration: none;
+    background-color: white;
+    text-align: left;
+    padding: 20px;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
 }
 
 /* Page footer */
