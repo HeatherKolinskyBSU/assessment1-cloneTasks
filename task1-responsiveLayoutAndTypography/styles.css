@@ -1,14 +1,16 @@
-/* sets the background colour for the entire page */
+/* Sets the background colour for the entire page */
 body {
     background-color: #e9e9e9;
 }
 
+/* Adds padding around the page on tablet screen sizes */
 @media (min-width: 720px) {
     body {
         padding: 5%;
     }
 }
 
+/* Adds even more padding around the page on desktop screen sizes */
 @media (min-width: 1024px) {
     body {
         padding: 10%;
@@ -106,7 +108,7 @@ body {
     flex-direction: column;
     text-decoration: none;
     background-color: white;
-    padding: 5px;
+    padding: 20px;
     font-family: "Josefin Sans", sans-serif;
     font-optical-sizing: auto;
     font-weight: 400;
@@ -130,10 +132,11 @@ body {
     font-style: normal;
 }
 
-/* Enlarges the first paragraph on desktop (>1024px) */
+/* Increases padding around the first paragraph on desktop (>1024px) */
 @media (min-width: 1024px) {
     .firstParagraph {
         font-size: 30px;
+        padding: 50px;
     }
 }
 
